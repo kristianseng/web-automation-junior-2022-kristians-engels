@@ -11,7 +11,7 @@ export class CreateAccountPage extends BasePage {
 
   async setDropdownValue(name, value) {
     await this.getDropdownField(name).click();
-    await this.getDropdownField(name).selectByAttribute("title", value);
+    await this.getDropdownField(name).selectByAttribute("value", value);
   }
 
   getRegisterButton() {

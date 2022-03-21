@@ -9,11 +9,11 @@ export default class UserData {
       faker.internet.password(),
       faker.address.streetAddress(),
       faker.address.city(),
-      faker.address.state(),
+      Math.floor(Math.random() * 52 + 1),
       faker.address.zipCode(),
-      faker.address.country(),
+      23,
       faker.phone.phoneNumber(),
-      // manufacturer helps to remember address
+      // car manufacturer helps to remember the address
       faker.vehicle.manufacturer()
     );
   }
