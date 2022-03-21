@@ -4,16 +4,16 @@ import { data } from "../support/data";
 export class InputTest {
   async fillOutCreateAccountForm() {
     await pages.createAccountPage
-      .getInputField("firstName")
+      .getInputField("customer_firstname")
       .setValue(await data.userData.person.firstname);
     await pages.createAccountPage
-      .getInputField("lastName")
+      .getInputField("customer_lastname")
       .setValue(await data.userData.person.lastName);
     await pages.createAccountPage
       .getInputField("email")
       .setValue(await data.userData.person.email);
     await pages.createAccountPage
-      .getInputField("password")
+      .getInputField("passwd")
       .setValue(await data.userData.person.password);
     await pages.createAccountPage
       .getInputField("address1")
@@ -22,19 +22,24 @@ export class InputTest {
       .getInputField("city")
       .setValue(await data.userData.person.city);
     await pages.createAccountPage.setDropdownValue(
-      "state",
+      "id_state",
       await data.userData.person.state
     );
     await pages.createAccountPage
-      .getInputField("postalCode")
+      .getInputField("postcode")
       .setValue(await data.userData.person.postCode);
+
     await pages.createAccountPage.setDropdownValue(
-      "country",
+      "id_country",
       await data.userData.person.country
     );
     await pages.createAccountPage
-      .getInputField("workPhone")
+      .getInputField("phone_mobile")
       .setValue(await data.userData.person.phone);
+
+    await pages.createAccountPage
+      .getInputField("alias")
+      .setValue(await data.userData.person.alias);
   }
   // async assertCheckEmailPage() {
   //     await pages.checkEmailPage.getCheckEmailHeader().waitForDisplayed({ timeout: 5000 })

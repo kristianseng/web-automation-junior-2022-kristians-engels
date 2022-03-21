@@ -12,7 +12,9 @@ export default class UserData {
       faker.address.state(),
       faker.address.zipCode(),
       faker.address.country(),
-      faker.phone.phoneNumber()
+      faker.phone.phoneNumber(),
+      // manufacturer helps to remember address
+      faker.vehicle.manufacturer()
     );
   }
 }
@@ -28,7 +30,8 @@ class Person {
     state,
     postCode,
     country,
-    phone
+    phone,
+    alias
   ) {
     this.firstname = firstname;
     this.lastName = lastName;
@@ -40,5 +43,6 @@ class Person {
     this.postCode = postCode;
     this.country = country;
     this.phone = phone;
+    this.alias = alias;
   }
 }

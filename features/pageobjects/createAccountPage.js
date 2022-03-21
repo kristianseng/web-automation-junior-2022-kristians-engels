@@ -1,26 +1,18 @@
 import { BasePage } from "./basePage";
 
 export class CreateAccountPage extends BasePage {
-  // getCookieFrame() {
-  //     return $('iframe[title*=Cookie]')
-  // }
+  getInputField(name) {
+    return $(`input[name="sView1:r1:0:${name}"]`);
+  }
 
-  // getAcceptAllButton() {
-  //     return $('//a[text()="Accept all"]')
-  // }
+  getDropdownField(name) {
+    return $(`select[name="sView1:r1:0:${name}"]`);
+  }
 
-  // getInputField(name) {
-  //     return $(`input[name="sView1:r1:0:${name}"]`)
-  // }
-
-  // getDropdownField(name) {
-  //     return $(`select[name="sView1:r1:0:${name}"]`)
-  // }
-
-  // async setDropdownValue(name, value) {
-  //     await this.getDropdownField(name).click();
-  //     await this.getDropdownField(name).selectByAttribute('title', value);
-  // }
+  async setDropdownValue(name, value) {
+    await this.getDropdownField(name).click();
+    await this.getDropdownField(name).selectByAttribute("title", value);
+  }
 
   getRegisterButton() {
     return $("#submitAccount");
