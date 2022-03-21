@@ -1,9 +1,10 @@
-import {NavigationTest} from '../testobjects/navigationTest'
+import { NavigationTest } from "../testobjects/navigationTest";
+import { InputTest } from "../testobjects/inputTest";
 
 class Tests {
-    constructor() {
-        this.navigationTest = new NavigationTest();
-    }
+  constructor() {
+    this.inputTest = new InputTest();
+    this.navigationTest = new NavigationTest();
+  }
 }
-
 export const tests = new Tests();

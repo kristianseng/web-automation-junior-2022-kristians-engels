@@ -1,11 +1,11 @@
-import {BasePage} from './basePage'
+import { BasePage } from "./basePage";
 
 export class InputEmailPage extends BasePage {
-    // getCheckEmailHeader() {
-    //     return $('.x28a')
-    // }
+  getEmailField() {
+    return $("#email_create");
+  }
 
-    // getEmailText() {
-    //     return $('//span[@class="x283"][1]')
-    // }
+  getCreateAccountBtn() {
+    return $("#SubmitCreate");
+  }
 }

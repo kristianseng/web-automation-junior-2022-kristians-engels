@@ -9,11 +9,3 @@ Feature: TDL registration test
     And User presses the Register button
     Then User is logged in
     And User is in My account page
-
-
-
-
-    #Examples:
-    #  | username | password             | message                        |
-    #  | tomsmith | SuperSecretPassword! | You logged into a secure area! |
-    #  | foobar   | barfoo               | Your username is invalid!      |
