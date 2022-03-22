@@ -21,13 +21,14 @@ export class InputTest {
     await pages.createAccountPage
       .getInputField("city")
       .setValue(await data.userData.person.city);
+    await pages.createAccountPage
+      .getInputField("postcode")
+      .setValue(await data.userData.person.postCode);
+
     await pages.createAccountPage.setDropdownValue(
       "id_state",
       await data.userData.person.state
     );
-    await pages.createAccountPage
-      .getInputField("postcode")
-      .setValue(await data.userData.person.postCode);
 
     await pages.createAccountPage.setDropdownValue(
       "id_country",

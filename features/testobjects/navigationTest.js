@@ -17,12 +17,16 @@ export class NavigationTest {
     await pages.basePage.getSignInButton().waitForDisplayed({ timeout: 5000 });
   }
   async assertIsLoggedIn() {
-    await pages.MyAccountPage.getAccountNameText().toHaveText(
-      `${data.userData.person.firstName} ${data.userData.person.lastName}`
-    );
     await pages.MyAccountPage.getLogOutBtn().waitForDisplayed({
       timeout: 5000,
     });
+    await pages.MyAccountPage.getAccountNameText()
+      .waitForDisplayed({
+        timeout: 5000,
+      })
+      .toHaveText(
+        `${data.userData.person.firstName} ${data.userData.person.lastName}`
+      );
   }
 
   async assertOpenMyAccountPage() {
