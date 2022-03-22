@@ -12,7 +12,12 @@ export class NavigationTest {
     pages.createAccountPage.getRegisterButton().click();
   }
 
-  async openLandingPage() {}
-  async isLoggedIn() {}
-  async openMyAccountPage() {}
+  async openLandingPage() {
+    await browser.url("/");
+    await pages.basePage
+      .getCreateAccountBtn()
+      .waitForDisplayed({ timeout: 5000 });
+  }
+  async assertIsLoggedIn() {}
+  async assertOpenMyAccountPage() {}
 }

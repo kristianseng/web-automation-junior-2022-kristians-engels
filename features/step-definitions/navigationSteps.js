@@ -18,9 +18,9 @@ And("User presses the Register button", async function () {
 });
 
 Then("User is logged in", async function () {
-  await tests.navigationTest.isLoggedIn();
+  await tests.navigationTest.assertIsLoggedIn();
 });
 
 And("User is in My account page", async function () {
-  await tests.navigationTest.openMyAccountPage();
+  await tests.navigationTest.assertOpenMyAccountPage();
 });

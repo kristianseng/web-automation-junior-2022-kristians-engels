@@ -8,4 +8,8 @@ export class InputEmailPage extends BasePage {
   getCreateAccountBtn() {
     return $("#SubmitCreate");
   }
+
+  getSignInHeader() {
+    return $(".page-heading");
+  }
 }
