@@ -1,24 +1,18 @@
-import {pages} from '../support/pages'
+import { pages } from "../support/pages";
 
 export class NavigationTest {
-    // async openProfilePage() {
-    //    await browser.url('/');
-    //    await pages.basePage.getCreateAccountButton().waitForDisplayed({ timeout: 5000 })
-    // }
+  async pressSignInButton() {
+    await pages.basePage.getSignInButton().click();
+  }
+  async pressCreateAccountBtn() {
+    await pages.inputEmailPage.getCreateAccountBtn().click();
+  }
 
-    // async pressCreateAccountButton() {
-    //     await pages.basePage.getCreateAccountButton().click();
-    //     await browser.switchWindow('Oracle | Create Account');
-    // }
+  async pressRegisterBtn() {
+    pages.createAccountPage.getRegisterButton().click();
+  }
 
-    // async acceptCookies() {
-    //     if (await pages.createAccountPage.getCookieFrame().isDisplayed({ timeout: 5000 })) {
-    //         await browser.switchToFrame(await pages.createAccountPage.getCookieFrame())
-    //         await pages.createAccountPage.getAcceptAllButton().click()
-    //     }
-    // }
-
-    // async pressSignUpButton() {
-    //     await pages.createAccountPage.getSignUpButton().click()
-    // }
+  async openLandingPage() {}
+  async isLoggedIn() {}
+  async openMyAccountPage() {}
 }

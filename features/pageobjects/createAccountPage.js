@@ -2,7 +2,7 @@ import { BasePage } from "./basePage";
 
 export class CreateAccountPage extends BasePage {
   getInputField(name) {
-    return $(`input[name="sView1:r1:0:${name}"]`);
+    return $(`input[name="${name}"]`);
   }
 
   getDropdownField(name) {

@@ -41,9 +41,9 @@ export class InputTest {
       .getInputField("alias")
       .setValue(await data.userData.person.alias);
   }
-  // async assertCheckEmailPage() {
-  //     await pages.checkEmailPage.getCheckEmailHeader().waitForDisplayed({ timeout: 5000 })
-  //     await pages.checkEmailPage.getEmailText().waitForDisplayed()
-  //     await expect(pages.checkEmailPage.getEmailText()).toHaveText(`We sent an email to ${data.userData.oracleUser.email} with a button to verify your email address.`)
-  // }
+  async fillEmailField() {
+    await pages.inputEmailPage
+      .getEmailField()
+      .setValue(await data.userData.person.email);
+  }
 }
