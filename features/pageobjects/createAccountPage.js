@@ -6,7 +6,7 @@ export class CreateAccountPage extends BasePage {
   }
 
   getDropdownField(name) {
-    return $(`select[name="sView1:r1:0:${name}"]`);
+    return $(`select[name="${name}"]`);
   }
 
   async setDropdownValue(name, value) {

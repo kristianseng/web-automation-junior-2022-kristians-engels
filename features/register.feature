@@ -1,5 +1,6 @@
 Feature: TDL registration test
 
+  @registration
   Scenario: Register a new user
     Given User has opened the landing page
     And User presses the Sign In button

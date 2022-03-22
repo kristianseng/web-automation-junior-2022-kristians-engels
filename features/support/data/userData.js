@@ -11,7 +11,7 @@ export default class UserData {
       faker.address.city(),
       Math.floor(Math.random() * 52 + 1),
       faker.address.zipCode(),
-      23,
+      21,
       faker.phone.phoneNumber(),
       // car manufacturer helps to remember the address
       faker.vehicle.manufacturer()

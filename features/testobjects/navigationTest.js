@@ -14,9 +14,7 @@ export class NavigationTest {
 
   async openLandingPage() {
     await browser.url("/");
-    await pages.basePage
-      .getCreateAccountBtn()
-      .waitForDisplayed({ timeout: 5000 });
+    await pages.basePage.getSignInButton().waitForDisplayed({ timeout: 5000 });
   }
   async assertIsLoggedIn() {
     await pages.MyAccountPage.getAccountNameText().toHaveText(
