@@ -10,11 +10,11 @@ export class MyAccountPage extends BasePage {
   }
 
   getAccountNameText() {
-    return $('//span[@class="account"][1]');
+    return $('//a[@class="account"]/span');
   }
 
   getIconText() {
-    return $('//span[@class="breadcrumb"][2]');
+    return $('//span[@class="navigation_page"]');
   }
 
   getMyAccountNav() {

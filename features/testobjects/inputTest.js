@@ -5,7 +5,7 @@ export class InputTest {
   async fillOutCreateAccountForm() {
     await pages.createAccountPage
       .getInputField("customer_firstname")
-      .setValue(await data.userData.person.firstname);
+      .setValue(await data.userData.person.firstName);
     await pages.createAccountPage
       .getInputField("customer_lastname")
       .setValue(await data.userData.person.lastName);
@@ -24,15 +24,16 @@ export class InputTest {
     await pages.createAccountPage
       .getInputField("postcode")
       .setValue(await data.userData.person.postCode);
-
+    await pages.createAccountPage
+      .getInputField("postcode")
+      .setValue(await data.userData.person.postCode);
+    await pages.createAccountPage.setDropdownValue(
+        "id_country",
+        await data.userData.person.country
+      );
     await pages.createAccountPage.setDropdownValue(
       "id_state",
       await data.userData.person.state
-    );
-
-    await pages.createAccountPage.setDropdownValue(
-      "id_country",
-      await data.userData.person.country
     );
     await pages.createAccountPage
       .getInputField("phone_mobile")

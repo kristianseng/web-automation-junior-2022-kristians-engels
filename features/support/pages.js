@@ -8,7 +8,7 @@ class Pages {
     this.basePage = new BasePage();
     this.createAccountPage = new CreateAccountPage();
     this.inputEmailPage = new InputEmailPage();
-    this.MyAccountPage = new MyAccountPage();
+    this.myAccountPage = new MyAccountPage();
   }
 }
 

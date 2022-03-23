@@ -9,7 +9,7 @@ export default class UserData {
       faker.name.lastName(),
       faker.internet.email(),
       faker.internet.password(),
-      faker.address.streetAddress(),
+      faker.address.streetAddress(true),
       faker.address.city(),
       2,
       faker.address.zipCode("#####"),
@@ -23,7 +23,7 @@ export default class UserData {
 
 class Person {
   constructor(
-    firstname,
+    firstName,
     lastName,
     email,
     password,
@@ -35,7 +35,7 @@ class Person {
     phone,
     alias
   ) {
-    this.firstname = firstname;
+    this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
     this.password = password;
