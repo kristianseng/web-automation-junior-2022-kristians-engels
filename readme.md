@@ -1,58 +1,56 @@
-TestDevLab course on automation testing using WebdriverIO and Cucumber
+# Automation testing using WebdriverIO and Cucumber
 
-Goal ->
-
+**Goal**<br>
 Test new user registration functionality on - http://automationpractice.com/index.php
 
 
-Prerequisites:
-JDK,
-NodeJs v14^
+**Prerequisites**
 
-Project setup ->
+- JDK
+- NodeJs v14^
 
-Clone repository;
-npm install;
-npm run cucumber; (running script to execute tests)
-allure generate ./allure-results && allure open (Generate and open the report)
+**Project setup**
+
+- clone repository;<br>
+- npm install;<br>
+- npm run cucumber; (script to execute tests)<br>
+- allure generate ./allure-results && allure open (Generate and open the report)<br>
 
 
-Dependenies used in the project:
+**Dependenies used in the project**
 
-allure-reported -> A WebdriverIO reporter plugin to create Allure Test Reports
-allure commandline -> tool to generate Allure report from test results
-fakerJs -> generate input field data
-selenium-standalone-service -> running tests on two browsers (chrome and firefox)
+- allure-reported -> A WebdriverIO reporter plugin to create Allure Test Reports<br>
+- allure commandline -> tool to generate Allure report from test results<br>
+- fakerJs -> generate input field data<br>
+- selenium-standalone-service -> running tests on two browsers (chrome and firefox)<br>
 
 Additional config added to generate screenshots in allure reports if test fails
 
 
-Jenkins Setup
+## Jenkins Setup
 
-Created using Jenkins freestyle project and recommended plugin setup
+Project created using Jenkins freestyle project and recommended plugin setup
 
 Additional plugins:
 1. Allure reporter
 2. NodeJS plugin
 
-
+### Video guide:
 
 https://vimeo.com/691356803/55e6e28b6f
 
-Video content:
-
-Plugin configuration 
-Jenkins and git configuration
-Build scripts
-Project Build
-Test executation
-Allure report generation
+1. Plugin configuration 
+2. Jenkins and git configuration
+3. Build scripts
+4. Project Build
+5. Test executation
+6. Allure report generation
 
 
 
 
-Some known errors -
+### Some known errors -
 
 * Element selectors fail - Resource limit reached on the web page (wait some time and try again)
 
-* Error TypeError: elem[prop] is not a function - repeat test execution
+* Error TypeError: elem[prop] is not a function (try again)
