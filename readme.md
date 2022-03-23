@@ -1,31 +1,58 @@
-Some errors expected
+TestDevLab course on automation testing using WebdriverIO and Cucumber
+
+Goal ->
+
+Test new user registration functionality on - http://automationpractice.com/index.php
 
 
-Unable to fine element due to - Resource limit reached on the web page
+Prerequisites:
+JDK,
+NodeJs v14^
 
-Error TypeError: elem[prop] is not a function
+Project setup ->
 
-
-
-npm install @wdio/allure-reporter --save-dev
-
-npm install -g allure-commandline --save-dev
-
-
- Generate and open the report: `allure generate ./allure-results
---clean && allure open`
+Clone repository;
+npm install;
+npm run cucumber; (running script to execute tests)
+allure generate ./allure-results && allure open (Generate and open the report)
 
 
-screenshot feature
+Dependenies used in the project:
 
-2 browsers
+allure-reported -> A WebdriverIO reporter plugin to create Allure Test Reports
+allure commandline -> tool to generate Allure report from test results
+fakerJs -> generate input field data
+selenium-standalone-service -> running tests on two browsers (chrome and firefox)
+
+Additional config added to generate screenshots in allure reports if test fails
+
+
+Jenkins Setup
+
+Created using Jenkins freestyle project and recommended plugin setup
+
+Additional plugins:
+1. Allure reporter
+2. NodeJS plugin
+
+
+
+https://vimeo.com/691356803/55e6e28b6f
+
+Video content:
+
+Plugin configuration 
+Jenkins and git configuration
+Build scripts
+Project Build
+Test executation
+Allure report generation
 
 
 
 
-For jenkins installed plugins ->
+Some known errors -
 
-Allure reporter Jenkins plugin
-NodeJS plugin Jenkins plugin
+* Element selectors fail - Resource limit reached on the web page (wait some time and try again)
 
-Global Tool Configuration
+* Error TypeError: elem[prop] is not a function - repeat test execution
