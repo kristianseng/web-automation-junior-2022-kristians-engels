@@ -13,18 +13,18 @@
 
 **Project setup**
 
-- clone repository;<br>
-- npm install;<br>
-- npm run cucumber; (script to execute tests)<br>
-- allure generate ./allure-results && allure open (Generate and open the report)<br>
+- clone repository<br>
+- npm install<br>
+- npm run cucumber (script to execute tests)<br>
+- allure generate ./allure-results && allure open (generate and open the report)<br>
 
 
 **Dependenies used in the project**
 
-- allure-reported -> A WebdriverIO reporter plugin to create Allure Test Reports<br>
+- allure-reported -> a WebdriverIO reporter plugin to create Allure Test Reports<br>
 - allure commandline -> tool to generate Allure report from test results<br>
-- fakerJs -> generate input field data<br>
-- selenium-standalone-service -> running tests on two browsers (chrome and firefox)<br>
+- fakerJs -> tool to generate input field data<br>
+- selenium-standalone-service -> tool for running tests on two browsers (chrome and firefox)<br>
 
 Additional config added to generate screenshots in allure reports if test fails
 
