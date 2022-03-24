@@ -1,8 +1,10 @@
 # Automation testing using WebdriverIO and Cucumber
 
-**Goal**<br>
-Test new user registration functionality on - http://automationpractice.com/index.php
+<br>
 
+**Testing new user registration functionality on** - http://automationpractice.com/index.php
+<br>
+<br>
 
 **Prerequisites**
 
@@ -35,7 +37,7 @@ Additional plugins:
 1. Allure reporter
 2. NodeJS plugin
 
-### Video guide:
+**Jenkins video guide:**
 
 https://vimeo.com/691356803/55e6e28b6f
 
@@ -49,7 +51,7 @@ https://vimeo.com/691356803/55e6e28b6f
 
 
 
-### Some known errors -
+ **Some known errors** -
 
 * Element selectors fail - Resource limit reached on the web page (wait some time and try again)
 
